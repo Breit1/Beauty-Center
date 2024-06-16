@@ -37,7 +37,7 @@ jobs:
     - name: Dependencies installation
       run: |
         python3 -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r hw4/requirements.txt
         chmod +x testing/test.sh
     - name: Test views
       run: ./testing/test.sh testing.test_views
