@@ -1,0 +1,239 @@
+.center-details-p {
+    position: relative;
+    text-align: center;
+}
+
+.center-name-p {
+    font-size: 30px;
+}
+
+.to-top {
+    margin-left: 100px;
+    margin-top: 30px;
+    color: #af5e5e;
+    background: none;
+    display: inline-block;
+    position: absolute;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 32px;
+    border: solid 0;
+    z-index: 3;
+}
+
+.to-top:before {
+    content: '◄';
+    font-size: 1.5em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1.2em;
+    border: solid .13em white;
+    border-radius: 10em;
+    width: 2.4em;
+    height: 2.4em;
+    line-height: 2.3em;
+    border-color: inherit;
+    transition: transform .5s ease-in;
+}
+
+.to-top:hover {
+    color: #986464;
+    border-color: #986464;
+}
+
+.to-top:hover:before {
+    transform: rotate(360deg);
+}
+
+.services-header {
+    text-align: center;
+    font-size: 50px;
+}
+
+.fon-cp {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+
+.fon-img-cp {
+    display: flex;
+    position: relative;
+    pointer-events: none;
+    justify-content: end;
+    opacity: 0.6;
+}
+
+.title-cp {
+    display: flex;
+    position: absolute;
+    font-size: 4vw;
+    z-index: 3;
+    font-family: 'Lighthaus';
+    margin-top: 100px;
+    color: white;
+}
+
+.block-up,
+.block-left,
+.block-right,
+.block-down {
+    background-color: #5D806E;
+    background-size: cover;
+}
+
+.block-up,
+.block-down {
+    height: 50px;
+}
+
+.block-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.side-block {
+    flex: 1;
+    background-color: #5D806E;
+    background-size: cover;
+}
+
+.main-content {
+    flex: 7;
+    background: white;
+    padding: 20px;
+}
+
+.services-section {
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.center-details {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.center-phone,
+.center-address {
+    margin-top: 10px;
+}
+
+.comment-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.comment-form textarea,
+.comment-form input {
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: left;
+    border-radius: 10px;
+    background: linear-gradient(225deg, #f3f3f3, #ffffff);
+    box-shadow:  -15px 15px 9px #d8d8d8,
+    15px -15px 9px #d8d8d8;
+}
+
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    max-width: 180px;
+
+}
+
+.form__field {
+    font-weight: 300;
+    width: 150%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    color: #2b2d34;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__group field{
+    width: 100%;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
+    pointer-events: none;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #64947a, #72bf96);
+    border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #64947a;
+    font-weight: 700;
+}
+
+.form__field:required, .form__field:invalid {
+    box-shadow: none;
+}
+
+.inp-com{
+    display: flex;
+    justify-content: center;
+}

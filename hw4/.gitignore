@@ -1,0 +1,5 @@
+.env 
+postgres_datqa 
+db.sqlite3 
+__pycache__ 
+venv 

@@ -1,0 +1,187 @@
+.unlogin-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+.unlogin {
+    padding: 10px;
+    border: #282c34 solid 1px;
+    border-radius: 5px;
+    max-width: 200px;
+    background-color: #f1f1f1;
+    font-size: 20px;
+}
+
+.polzov {
+    display: inline-block;
+    font-size: 16px;
+    color: #747474;
+}
+
+.t-unlog {
+    padding: 5px;
+    background-color: #af4c72;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.text {
+    font-size: 30px;
+    text-align: center;
+}
+
+.center{
+    justify-content: center;
+    border: #282c34 solid 1px;
+    max-width: 500px;
+    background-color: #f1f1f1;
+    font-size: 15px;
+    margin-top: 30px;
+    width: 500px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.center-details {
+    margin: 20px;
+}
+
+.center-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.center-link:hover {
+    color: #383a40;
+}
+
+.comment-section {
+    margin: 20px;
+    flex-direction: column;
+
+}
+
+.center-sens-comment{
+    display: flex;
+
+}
+
+
+.rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+
+}
+
+.rating .star {
+    color: #ddd;
+    transition: color 0.2s;
+
+}
+
+.rating .star.filled {
+    color: #e1de27;
+}
+
+.comments .star {
+    color: #e1de27;
+    font-size: 1em;
+}
+
+
+.comment-section button {
+    padding: 10px;
+    background-color: #5D806E;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.comment-section button:hover {
+    background-color: #ed76b4;
+}
+
+
+
+
+.input-container{
+    position:relative;
+    margin-bottom:25px;
+    margin-top: 10px;
+}
+.input-container label{
+    position:absolute;
+    top:0px;
+    left:0px;
+    font-size:16px;
+    color: #5f5f5f;
+    pointer-event:none;
+    transition: all 0.5s ease-in-out;
+}
+.input-container input{
+    border:0;
+    border-bottom:1px solid #555;
+    background:transparent;
+    width:100%;
+    padding:8px 0 5px 0;
+    font-size:16px;
+    color: #2b2d34;
+}
+.input-container input:focus{
+    border:none;
+    outline:none;
+    border-bottom:1px solid #ff0080;
+}
+.btn{
+    color:#fff;
+    background-color: #ff0080;
+    outline: none;
+    border: 0;
+    padding:10px 20px;
+    text-transform:uppercase;
+    margin-top:50px;
+    border-radius:2px;
+    cursor:pointer;
+    position:relative;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+    top:-12px;
+    font-size:12px;
+
+}
+
+
+
+.centers-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comments{
+    margin-top: 100px;
+}
+
+.comment-header{
+    text-align: center;
+    font-size:20px;
+}
+
+.comment{
+    border: #282c34 solid 1px;
+    border-radius: 5px;
+}
+
+

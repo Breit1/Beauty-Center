@@ -1,0 +1,236 @@
+/* Register.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #f9f9f9;
+}
+
+.register-header {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    padding: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    padding: 0.75em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.submit-buttonG {
+    padding: 0.75em;
+    background-color: #a9a9a9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.submit-buttonG:hover {
+    background-color: #868686;
+}
+
+.error-message, .success-message {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.error-message {
+    color: red;
+}
+
+.success-message {
+    color: green;
+}
+
+.toggle-button {
+    margin-top: 1em;
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1em;
+}
+
+.toggle-button:hover {
+    text-decoration: underline;
+}
+
+.vhod-reg {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 19px;
+}
+
+
+.or {
+    text-align: center;
+    margin-top: 1em;
+    color: #666;
+}
+
+
+/**/                                                                    /**/
+.ring {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.ring i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #5D806E;
+    transition: 0.5s;
+}
+.ring i:nth-child(1) {
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 6s linear infinite;
+
+}
+.ring i:nth-child(2) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate 4s linear infinite;
+}
+.ring i:nth-child(3) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate2 10s linear infinite;
+}
+.ring:hover i {
+    border: 4px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.login {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.login h2 {
+    font-size: 2em;
+    color: #2b2d34
+}
+.login .inputBx {
+    position: relative;
+    width: 100%;
+}
+.login .inputBx input {
+    position: relative;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #5D806E;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #2b2d34;
+    box-shadow: none;
+    outline: none;
+}
+
+.login .inputBx input[type="submit"] {
+    width: 98%;
+    background: #0078ff;
+    background: #5D806E;
+    border: none;
+    cursor: pointer;
+}
+.login .inputBx input::placeholder {
+    color: rgb(137, 137, 137);
+}
+.login .links {
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+}
+.login .links a {
+    color: #2b2d34;
+    text-decoration: none;
+}
