@@ -44,6 +44,6 @@ jobs:
     - name: Test models
       run: ./testing/test.sh testing.test_models
     - name: Test api
-      run: ./run_tests.sh tests.test_api
+      run: .hw4/run_tests.sh tests.test_api
     - name: Test forms
       run: ./testing/test.sh testing.test_forms
