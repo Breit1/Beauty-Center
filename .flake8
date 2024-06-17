@@ -1,0 +1,7 @@
+[flake8]
+max-line-length = 120
+exclude =
+    .git,
+    hw4/__pycache__,
+    hw4/migrations
+
