@@ -3,7 +3,7 @@ name: Run tests
 on:
   push:
     branches:
-      - main
+      - main  # Здесь указывается ветка, на которой запускается workflow
   pull_request:
     branches:
       - main
@@ -15,7 +15,7 @@ jobs:
       redis:
         image: redis:latest
         ports:
-          - 6379:6379
+          - 6379:6379  # Пример сервиса Redis, если он нужен для вашего проекта
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -25,14 +25,21 @@ jobs:
 
       - name: Build and run Docker Compose services
         run: |
-          docker-compose -f docker-compose.yml up -d --build
+          cd hw4  # Переход в каталог с docker-compose.yml
+          docker-compose up -d --build
+        env:
+          DOCKER_BUILDKIT: 1  # Включение BuildKit для ускорения сборки
 
       - name: Run tests
         run: |
-          docker-compose -f docker-compose.yml run --rm app python manage.py test
+          cd hw4  # Переход в каталог с docker-compose.yml
+          docker-compose run --rm app python manage.py test
         env:
           DJANGO_SETTINGS_MODULE: project.settings.test
           PYTHONPATH: .
+          # Дополнительные переменные окружения, если нужны
 
       - name: Shutdown Docker Compose services
-        run: docker-compose -f docker-compose.yml down
+        run: |
+          cd hw4  # Переход в каталог с docker-compose.yml
+          docker-compose down
