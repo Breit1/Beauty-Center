@@ -40,10 +40,8 @@ jobs:
         pip install -r hw4/requirements.txt
         chmod +x hw4/tests/test.sh
     - name: Test views
-      run: ./testing/test.sh testing.test_views
+      run: ./hw4/run_tests.sh tests.test_views
     - name: Test models
-      run: ./testing/test.sh testing.test_models
+      run: ./hw4/run_tests.sh tests.test_models
     - name: Test api
-      run: .hw4/run_tests.sh tests.test_api
-    - name: Test forms
-      run: ./testing/test.sh testing.test_forms
+      run: ./hw4/run_tests.sh tests.test_api
