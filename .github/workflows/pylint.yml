@@ -1,48 +1,38 @@
-name: Django Tests
-
-on:
-  push:
-    branches:
-      - main  # Здесь указываем ветку, на которой будут запускаться тесты
-  pull_request:
-    branches:
-      - main
-
 jobs:
   test:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:14  # Используем нужный вам образ PostgreSQL
+        image: postgres:14
         env:
           POSTGRES_DB: db_buty
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
         ports:
-          - 5432:5432
+          - 5433:5432
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Docker Compose
-      run: docker-compose -f ./hw4/docker-compose.yml up -d
+      - name: Set up Docker Compose
+        run: docker-compose -f ./hw4/docker-compose.yml up -d
 
-    - name: Run Django tests
-      run: |
-        docker-compose -f ./hw4/docker-compose.yml exec web python manage.py test --noinput
+      - name: Run Django tests
+        run: |
+          docker-compose -f ./hw4/docker-compose.yml run web python manage.py test --noinput
 
-    - name: Save test results
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: test-reports
+      - name: Save test results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: test-reports
 
-    - name: Send coverage data to Codecov
-      uses: codecov/codecov-action@v2
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Send coverage data to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
 
-    - name: Shut down Docker Compose
-      run: docker-compose -f ./hw4/docker-compose.yml down
+      - name: Shut down Docker Compose
+        run: docker-compose -f ./hw4/docker-compose.yml down
